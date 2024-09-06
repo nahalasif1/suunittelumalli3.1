@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Department implements OrganizationComponent {
+public class Department implements Organization {
 
     String name;
-    private List<OrganizationComponent> children = new ArrayList<>();
+    private List<Organization> children = new ArrayList<>();
 
     public Department(String name) {
         this.name = name;
@@ -12,30 +12,32 @@ public class Department implements OrganizationComponent {
 
     @Override
     public String getName() {
+
         return name;
     }
 
     @Override
+    
     public double getSalary() {
         double salary = 0;
-        for (OrganizationComponent child : children) {
+        for (Organization child : children) {
             salary += child.getSalary();
         }
         return salary;
     }
 
     @Override
-    public void add(OrganizationComponent organizationComponent) {
-        children.add(organizationComponent);
+    public void add(Organization organization) {
+        children.add(organization);
     }
 
     @Override
-    public void remove(OrganizationComponent organizationComponent) {
-        children.remove(organizationComponent);
+    public void remove(Organization organization) {
+        children.remove(organization);
     }
 
     @Override
-    public List<OrganizationComponent> getChildren() {
+    public List<Organization> getChildren() {
         return children;
     }
 
@@ -44,7 +46,7 @@ public class Department implements OrganizationComponent {
         StringBuilder details = new StringBuilder();
         details.append("<Department name=\"").append(name).append("\">\n");
         if (!children.isEmpty()) {
-            for (OrganizationComponent child : children) {
+            for (Organization child : children) {
                 details.append(child.getDetails()).append("\n");
             }
         }

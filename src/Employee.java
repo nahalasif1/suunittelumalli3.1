@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Employee implements OrganizationComponent{
+public class Employee implements Organization {
 
     private String name;
     private double salary;
@@ -19,17 +19,17 @@ public class Employee implements OrganizationComponent{
     }
 
     @Override
-    public void add(OrganizationComponent organizationComponent) {
+    public void add(Organization organization) {
 
     }
 
     @Override
-    public void remove(OrganizationComponent organizationComponent) {
+    public void remove(Organization organization) {
 
     }
 
     @Override
-    public List<OrganizationComponent> getChildren() {
+    public List<Organization> getChildren() {
         return null;
     }
 
