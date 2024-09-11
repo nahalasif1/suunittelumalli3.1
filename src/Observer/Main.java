@@ -27,14 +27,14 @@ public class Main {
         Thread.sleep(10000);
 
 
-        System.out.println("Unsubscribing Observer 3...");
+        System.out.println("Unsubscribing Observer 4...");
         weatherStation.unsubscribe(observer3);
 
 
         Thread.sleep(10000);
 
 
-        weatherStation.stopWeatherStation();
+        weatherStation.stopWeatherStation(4);
         weatherStation.join();
     }
 }

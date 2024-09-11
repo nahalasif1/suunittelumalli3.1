@@ -70,7 +70,7 @@ public class WeatherStation extends Thread {
     }
 
 
-    public void stopWeatherStation() {
+    public void stopWeatherStation(int i) {
         running = false;
         System.out.println("Weather station stopped.");
     }
