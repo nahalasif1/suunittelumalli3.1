@@ -9,9 +9,9 @@ public class Logger {
     private BufferedWriter writer;
     private String fileName;
 
-    // Private constructor to prevent instantiation
+
     private Logger() {
-        fileName = "default_log.txt"; // Default log file
+        fileName = "default_log.txt";
         try {
             writer = new BufferedWriter(new FileWriter(fileName, true));
         } catch (IOException e) {
@@ -19,7 +19,7 @@ public class Logger {
         }
     }
 
-    // Method to get the single instance of the Logger class
+
     public static Logger getInstance() {
         if (instance == null) {
             synchronized (Logger.class) {
@@ -31,7 +31,7 @@ public class Logger {
         return instance;
     }
 
-    // Method to set a new file name for logging
+
     public void setFileName(String newFileName) {
         try {
             if (writer != null) {
@@ -44,7 +44,7 @@ public class Logger {
         }
     }
 
-    // Method to write log messages to the file
+
     public void write(String message) {
         try {
             writer.write(message);
@@ -55,7 +55,7 @@ public class Logger {
         }
     }
 
-    // Method to close the writer
+
     public void close() {
         try {
             if (writer != null) {
