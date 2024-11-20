@@ -9,7 +9,7 @@ public class BasicRemote implements Remote {
 
     @Override
     public void power() {
-        System.out.println("Basic Remote: Power toggle");
+        System.out.println("Basic Remote: Power off");
         if (device.isEnabled()) {
             device.disable();
         } else {

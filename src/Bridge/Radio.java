@@ -27,7 +27,7 @@ public class Radio implements Device {
 
     @Override
     public void setVolume(int volume) {
-        this.volume = Math.max(0, Math.min(volume, 100));
+        this.volume = Math.max(0, Math.min(volume, 90));
     }
 
     @Override

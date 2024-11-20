@@ -11,7 +11,7 @@ public class SmartRemote extends BasicRemote {
             System.out.println("Smart Remote: Voice control activated");
             ((SmartTv) device).browseInternet();
         } else {
-            System.out.println("Smart Remote: Voice control not supported on this device");
+            System.out.println("Smart Remote: Voice control disable");
         }
     }
 }
