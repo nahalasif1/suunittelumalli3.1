@@ -2,7 +2,7 @@ package Bridge;
 
 public class Radio implements Device {
     private boolean on = false;
-    private int volume = 30;
+    private int volume = 20;
     private int channel = 1;
 
     @Override
